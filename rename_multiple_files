@@ -1,0 +1,2 @@
+RENAME on Macbook Terminal:
+  use 'rename "s/flow_/flow_0/" flow_[0_9]*.pdf'
