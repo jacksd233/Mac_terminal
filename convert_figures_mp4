@@ -9,3 +9,6 @@ $ ffmpeg -i %03d.png -filter_complex scale=120:-1,tile=5x1 output.png
 
 0100.png 0101.png 
   ffmpeg -i %04d.png ...
+
+# 文件名不是连续数字
+ffmpeg -pattern_type glob -framerate 10 -i "IPPS_G_withERA5_*.png" -vf "pad=ceil(iw/2)*2:ceil(ih/2)*2" -c:v libx264 -pix_fmt yuv420p output1.mp4
